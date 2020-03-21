@@ -1,119 +1,214 @@
-body{
-  background-color: #e1f1f6;
-  font-family: Helvetica, sans-serif;
-  color: #222;
+/*--------------------------- Body  ------------------------*/
+
+body {
+	background: #f9f9f9;
+	color: #222;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-.page{
-  margin: 50px auto;
-  width: 70%;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 50px;
+.page {
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+	margin: 50px auto;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 50px;
 }
 
-.page-header{
-  margin-bottom: 20px;
+
+/*------------------------Header--------------------------*/
+
+.page-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 20px;
 }
-  .page-header h2{
-    float: left;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #555;
-  }
 
-  .page-header .student-search{
-    float: right;
-  }
-
-    .page-header .student-search input{
-      border-radius: 5px;
-      border: 1px solid #eaeaea;
-      padding: 8px 15px;
-      font-size: 14px;
-    }
-
-    .page-header .student-search button{
-      border-radius: 5px;
-      border: 1px solid #eaeaea;
-      padding: 8px 15px;
-      font-size: 14px;
-      background-color: #4ba6c3;
-      color: #fff
-    }
-
-.student-list{}
-
-  .student-item{
-    margin: 0 0 20px 0;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid #eaeaea;
-  }
-
-    .student-details{
-      width: 50%;
-      float: left;
-    }
-
-      .student-details .avatar{
-        width: 40px;
-        height: auto;
-        border-radius: 20px;
-        float: left;
-        margin-right: 14px
-      }
-
-      .student-details h3{
-        margin: 4px 0 2px 0;
-        font-weight: bold;
-        color: #4ba6c3;
-      }
-
-      .student-details .email{
-        color: #888;
-        font-size: 14px;
-      }
-
-
-    .joined-details{
-      width: 50%;
-      float: left;
-      text-align: right;
-    }
-
-      .joined-details .date{
-        margin-top: 15px;
-        display: block;
-        font-size: 14px;
-        color: #999;
-      }
-
-  .student-item:last-child{
-    margin: 0;
-    padding: 0;
-    border-bottom: none;
-  }
-
-.pagination{
-  margin: 40px 0 0 0;
-  text-align: center;
+.page-header h2 {
+	font-size: 3.5rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #57DD80;
+	margin-bottom: 20px;
+	text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.1);
 }
- 
-  .pagination li{
-    display: inline;
+
+.page-header .student-search input {
+	border-radius: 20px;
+	border: 1px solid #eaeaea;
+	padding: 10px 20px;
+  font-size: 1rem;
+  margin-right: 3px;
+	margin-bottom: 15px;
+}
+
+input:focus,
+button:focus {
+	outline: none;
+}
+
+.page-header .student-search button:hover {
+	background: #43ac63;
+}
+
+.page-header .student-search button {
+	border-radius: 20px;
+	border: 1px solid transparent;
+	padding: 10px 20px;
+	font-size: 1rem;
+	background: #57DD80;
+	background: -webkit-gradient(linear, left top, right top, from(#57DD80), to(#47b568));
+	background: -webkit-linear-gradient(left, #57DD80 0%, #47b568 100%);
+	background: -o-linear-gradient(left, #57DD80 0%, #47b568 100%);
+	background: linear-gradient(to right, #57DD80 0%, #47b568 100%);
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+/*----------------------List Items ---------------------------*/
+
+.student-item {
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 0;
+	text-align: center;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.student-details .avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 5px solid #fff;
+}
+
+.student-details h3 {
+	text-transform: capitalize;
+	margin: 4px 0 2px 0;
+	font-weight: bold;
+	color: #555;
+}
+
+.student-details .email {
+	color: #888;
+	font-size: 0.875rem;
+	margin: 0;
+}
+
+.joined-details .date {
+	margin-top: 5px;
+	display: block;
+	font-size: 0.875rem;
+	color: #999;
+}
+
+.student-item:last-child {
+	margin: 0;
+	padding: 0;
+	border-bottom: none;
+}
+
+.message {
+	text-align: center;
+	font-size: 21px;
+	color: #444;
+}
+
+
+/*--------------------------- Pagination ----------------------------*/
+
+.pagination {
+	margin: 40px 0 0 0;
+	text-align: center;
+}
+
+.pagination li {
+	display: inline;
+	margin-right: 2px;
+}
+
+.pagination li:last-child {
+	margin-right: 0;
+}
+
+.pagination li a {
+	width: 30px;
+	height: 30px;
+	padding: 3px 8px;
+	text-align: center;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #555;
+}
+
+.pagination li a.active,
+.pagination li a:hover {
+	background: #57DD80;
+	background: -webkit-gradient(linear, left top, right top, from(#57DD80), to(#47b568));
+	background: -webkit-linear-gradient(left, #57DD80 0%, #47b568 100%);
+	background: -o-linear-gradient(left, #57DD80 0%, #47b568 100%);
+	background: linear-gradient(to right, #57DD80 0%, #47b568 100%);
+	color: #fff;
+}
+
+
+/*-----------------------------Mobile----------------------------------------*/
+
+@media screen and (min-width: 767px) {
+	.page {
+		margin: 50px auto;
+		width: 70%;
   }
-
-    .pagination li a{
-      border: 1px solid #eaeaea;
-      border-radius: 5px;
-      padding: 3px 8px;
-      text-decoration: none;
-      color: #4ba6c3;
-    }
-
-    .pagination li a.active,
-    .pagination li a:hover{
-      background-color: #4ba6c3;
-      color: #fff;
-    }
+  
+	.page-header {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+	.page-header h2 {
+		margin-bottom: 0;
+	}
+	.page-header .student-search {
+		margin-left: auto;
+	}
+	.page-header .student-search input {
+		margin-bottom: 0;
+  }
+  
+	.student-details {
+		width: 50%;
+		text-align: left;
+		height: 20px;
+	}
+	.joined-details {
+		width: 50%;
+		float: right;
+		text-align: right;
+	}
+	.joined-details .date {
+		margin-top: 0;
+	}
+	.student-details .avatar {
+		float: left;
+		margin-right: 15px;
+	}
+}
